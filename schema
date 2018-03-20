@@ -1,0 +1,24 @@
+# DB schema
+
+table users
+  id integer
+
+table permissions
+  id integer
+  name string
+  description string
+  rule string
+
+table roles
+  id integer
+  name string
+  description string
+
+table permissions_roles
+  permission_id integer
+  role_id integer
+
+table abilities
+  user_id integer
+  ability_type string (permissions OR roles)
+  ability_id integer
